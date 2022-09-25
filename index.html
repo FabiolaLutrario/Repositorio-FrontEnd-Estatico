@@ -1,0 +1,1020 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Portfolio Fabiola Lutrario" />
+    <meta name="keywords" content="full stack web developer,portfolio" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fabiola Lutrario Dev</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="ASSETS/CSS/style.css">
+    <script src="https://kit.fontawesome.com/e65e2b2339.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section id="inicio">
+        <div class="contenido">
+            <header>
+                <div class="contenido-header">
+                    <a href="...">
+                        <img style="min-width: 70px;" src="ASSETS/IMG/APLogo-20-20.png" alt="logoAp" width="12%"
+                            height="">
+                    </a>
+                    <div class="redes">
+                        <a href="...">
+                            <i class="fa-brands fa-square-facebook fa-xl">
+                            </i>
+                        </a>
+                        <a href="...">
+                            <i class="fa-brands fa-linkedin fa-xl">
+                            </i>
+                        </a>
+                        <a href="...">
+                            <i class="fa-brands fa-github fa-xl">
+                            </i>
+                        </a>
+
+                            <!-- Button trigger modal -->
+                            <i class="fa-solid fa-user-lock fa-2xl" id="logoIniciarSesion" type="button" data-bs-toggle="modal" data-bs-target="#userLockModal">  
+                            </i>
+
+                            <!-- Boton cerrar sesión hasta cierre de "ul" -->
+                        <a class="nav-link dropdown-toggle" id="logoCerrarSesion" data-bs-toggle="dropdown" href="#" role="button" disabled
+                            aria-expanded="false" style="display:none;">
+                            <i class="fa-solid fa-user fa-2xl"></i>
+                        </a>
+                        <ul class="dropdown-menu">
+
+                            <li><a id="opcionCerrarSesion" class="dropdown-item  nav justify-content-end" href="#scrollspyHeading5"
+                                    style="color: #000000;">Cerrar Sesión</a></li>
+                        </ul>
+                    </div>
+
+                              <!-- Modal -->
+
+<div class="modal fade" data-bs-backdrop="static" data-bs-keyboard="false" id="userLockModal" tabindex="-1" aria-labelledby="userLockModalLabel" aria-hidden="true">
+    <div class="modal-dialog" >
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="userLockModalLabel">Login</h5>
+          <button id="botonCerrarModalSesion" type="button" class="btn-close" data-bs-dismiss="modal"
+          aria-label="Close"></button>
+        </div>
+  
+        <form id ="form">
+        <div class="modal-body">
+          <div class="mb-3 row">
+            <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+            <div class="col-sm-10">
+              <input type="text" class="form-control" id="usuario">
+            </div>
+          </div>
+          <div class="mb-3 row">
+            <label for="inputPassword" class="col-sm-2 col-form-label">Contraseña</label>
+            <div class="col-sm-10">
+              <input type="password" class="form-control" id="password">
+            </div>
+          </div>
+          <div class="rounded parpadea" id="usuarioContraseñaIncorrectos" style="display:none; text-align: center; justify-content:center; background-color:#ff9e81;">
+          <p style="color:#ff0000; font-size: 3.5vh;"><b>¡Usuario y/o contraseña inválidos, por favor intente de nuevo!</b></p>
+          </div>
+  
+        </div>
+    </form>
+        <div class="modal-footer">
+          <button type="button"  id="botonInicioSesion" class="btn btn-primary">Iniciar sesión</button>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+
+
+                </div>
+            </header>
+        </div>
+    </section>
+
+    <main>
+
+        <div class="banner" style="position:relative">
+
+            <!-- Button trigger modal -->
+            <button type="button" disabled id="botonBanner" style="display:none; position:absolute; margin-top:2rem; right: 3rem;" data-bs-toggle="modal"
+                data-bs-target="#bannerModal" class="btn btn-success rounded-circle btn-sm">
+                <i class="fa-solid fa-pen">
+                </i>
+            </button>
+            <!-- Modal -->
+            <div class="modal fade" id="bannerModal" tabindex="-1" aria-labelledby="bannerModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="bannerModalLabel">Editar Banner</h4>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+
+                        <div class="modal-body">
+                            <div class="mb-3">
+                                <h5 class="form-label">Seleccione una imagen:</h5>
+                                <input class="form-control" type="file" id="formFile">
+                            </div>
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-primary">Guardar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <img src="ASSETS/IMG/banner 4.jpg" class="d-block w-100" alt="...">
+        </div>
+
+        <section id="about-me" class="about">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-2 text-center" style="margin-top:-3rem; position:relative;min-width:90px;">
+
+                        <!-- Button trigger modal -->
+                        <button id="botonFotoPerfil" disabled type="button" data-bs-toggle="modal" data-bs-target="#fotoPerfilModal"
+                            style="position:absolute; top:70%; left:70%; display:none;" class="btn btn-success rounded-circle btn-sm">
+                            <i class="fa-solid fa-pen">
+                            </i>
+                        </button>
+
+                        <!-- Modal -->
+                        <div class="modal fade" id="fotoPerfilModal" tabindex="-1"
+                            aria-labelledby="fotoPerfilModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="fotoPerfilModalLabel">Editar foto de Perfil</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <div class="mb-3">
+                                            <h5 style="text-align:left" class="form-label">Seleccione una foto:</h5>
+                                            <input class="form-control" type="file" id="formFile">
+                                        </div>
+
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <img src="ASSETS/IMG/IMG_20220628_180954515_HDR.png"
+                            class="img-fluid rounded-circle border border-3" width="100%" alt="fabiola lutrario"
+                            title="...">
+                    </div>
+
+                    <div class="col-10 mt-3">
+                        <h2 id="text-about-me">Fabiola Lutrario
+
+                            <!-- Button trigger modal -->
+                            <button type="button" id="botonNombreyApellido" disabled data-bs-toggle="modal" data-bs-target="#nombreModal"
+                                style="position:absolute; right: 3rem; display:none;" class="btn btn-success rounded-circle btn-sm"><i
+                                    class="fa-solid fa-pen">
+                                </i>
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="nombreModal" tabindex="-1" aria-labelledby="nombreModalLabel"
+                                aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="nombreModalLabel">Editar Nombre y Apellido</h4>
+                                            <button type="button" style="width:5px; height: 5px;" class="btn-close"
+                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            <div class="mb-3">
+                                                <h5 class="form-label">Nombre y Apellido:</h5>
+                                                <input class="form-control" type="text" id="formText">
+                                            </div>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </h2>
+
+                        <h4>Full Stack Developer Jr.
+
+                            <!-- Button trigger modal -->
+                            <button id="botonTitulo" type="button" disbaled data-bs-toggle="modal" data-bs-target="#acercaDeMiModal"
+                                style="position:absolute; display: none; right: 3rem;" class="btn btn-success rounded-circle btn-sm"><i
+                                    class="fa-solid fa-pen">
+                                </i>
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="acercaDeMiModal" tabindex="-1"
+                                aria-labelledby="acercaDeMiModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="acercaDeMiModalLabel">Editar Descripción Acerca
+                                                de Mi</h4>
+                                            <button type="button" style="width:5px; height: 5px;" class="btn-close"
+                                                data-bs-dismiss="modal" aria-label="Close"></button>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            <div class="mb-3">
+                                                <h5 class="form-label">Descripción:</h5>
+                                                <input class="form-control" type="text" id="formText">
+                                            </div>
+
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="experiencia" class="rounded">
+            <div class="container-fluid">
+
+                <div class="row g-0">
+                    <div class="col-11">
+                        <h3 style="padding-top: 1rem;">Experiencia Laboral</h3>
+                    </div>
+                    <div class="col-1 text-end" style="padding-top: 1rem; padding-right: 1rem;">
+
+                        <!-- Button trigger modal -->
+                        <button id="botonAgregarExperiencia" disabled type="button" data-bs-toggle="modal" data-bs-target="#agregarNuevaExperienciaModal"
+                            class="btn btn-success rounded-circle btn-sm" style="display: none;"><i class="fa-solid fa-plus">
+                            </i>
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="agregarNuevaExperienciaModal" tabindex="-1"
+                            aria-labelledby="agregarNuevaExperienciaModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="agregarNuevaExperienciaModalLabel">Añadir
+                                            Experiencia Laboral</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <div class="mb-3">
+                                            <h5 style="text-align:left" class="form-label">Cargo:</h5>
+                                            <input class="form-control" type="text" id="formText">
+                                        </div>
+                                        <div class="mb-3">
+                                            <h5 style="text-align:left" class="form-label">Empresa:</h5>
+                                            <input class="form-control" type="text" id="formText">
+                                        </div>
+                                        <div class="mb-3">
+                                            <h5 style="text-align:left" class="form-label">Período:</h5>
+                                            <input class="form-control" type="text" id="formText">
+                                        </div>
+                                        <div class="mb-3">
+                                            <h5 style="text-align:left" class="form-label">Logo de la Empresa:</h5>
+                                            <input class="form-control" type="file" id="formFile">
+                                        </div>
+                                        <div class="mb-3">
+                                            <h5 style="text-align:left" class="form-label">Descripción:</h5>
+                                            <textarea class="form-control" aria-label="With textarea"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-1 text-center">
+                            <img src="ASSETS/IMG/logo empresa.png" class="img-fluid rounded-start" width="50px"
+                                alt="...">
+                        </div>
+                        <div class="col-10">
+                            <div class="card-body" style="padding: 0;">
+                                <h5 class="card-title">Auxiliar Administrativo</h5>
+                                <p>Supermercado Popular</p>
+                                <p class="card-text"><small class="text-muted">08/2015 - 11/2017</small></p>
+                                <p id="descripcionExperienciaLaboral" class="card-text">Manejo de base de datos en sistema administrativo ZEUS, arqueo de
+                                    caja, atención a proveedores, actualización de libros de compra-venta, elaboración
+                                    de contratos, sobres de pago y liquidación, control de asistencia diaria mediante
+                                    lector biométrico, control de inventario, entre otras actividades inherentes al
+                                    cargo.
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="col-1 text-end">
+                            <!-- Button trigger modal -->
+                            <button type="button" id="botonEditarExperiencia" disabled data-bs-toggle="modal" data-bs-target="#editarExperienciaModal"
+                                class="btn btn-success rounded-circle btn-sm" style="display:none;"><i class="fa-solid fa-pen">
+                                </i>
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="editarExperienciaModal" tabindex="-1"
+                                aria-labelledby="editarExperienciaModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="editarExperienciaModalLabel">Editar Experiencia
+                                                Laboral</h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            <div class="mb-3">
+                                                <h5 style="text-align:left" class="form-label">Cargo:</h5>
+                                                <input class="form-control" type="text" id="formText">
+                                            </div>
+                                            <div class="mb-3">
+                                                <h5 style="text-align:left" class="form-label">Empresa:</h5>
+                                                <input class="form-control" type="text" id="formText">
+                                            </div>
+                                            <div class="mb-3">
+                                                <h5 style="text-align:left" class="form-label">Período:</h5>
+                                                <input class="form-control" type="text" id="formText">
+                                            </div>
+                                            <div class="mb-3">
+                                                <h5 style="text-align:left" class="form-label">Logo de la Empresa:</h5>
+                                                <input class="form-control" type="file" id="formFile">
+                                            </div>
+                                            <div class="mb-3">
+                                                <h5 style="text-align:left" class="form-label">Descripción:</h5>
+                                                <textarea class="form-control" aria-label="With textarea"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Button trigger modal -->
+                            <button id="botonEliminarExperiencia" type="button" disabled style="display:none;" data-bs-toggle="modal" 
+                            data-bs-target="#eliminarExperienciaModal"
+                                class="btn btn-success rounded-circle btn-sm"><i class="fa-solid fa-trash-can">
+                                </i>
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal" tabindex="-1" id="eliminarExperienciaModal"
+                                aria-labelledby="eliminarExperienciaModalLabel">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="eliminarExperienciaModalLabel">Eliminar
+                                                Experiencia Laboral</h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h5 style="text-align:left" class="form-label">¿Está seguro de eliminar?
+                                            </h5>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Cancelar</button>
+                                            <button type="button" class="btn btn-primary">Aceptar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="educacion" class="rounded">
+            <div class="container-fluid">
+
+                <div class="row g-0">
+                    <div class="col-11">
+                        <h3 style="padding-top: 1rem;">Educación</h3>
+                    </div>
+                    <div class="col-1 text-end" style="padding-top: 1rem; padding-right: 1rem;">
+                        <!-- Button trigger modal -->
+                        <button type="button" id="botonAgregarEducacion" disabled style="display:none;" data-bs-toggle="modal" 
+                        data-bs-target="#agregarEducacionModal"
+                            class="btn btn-success rounded-circle btn-sm"><i class="fa-solid fa-plus">
+                            </i>
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="agregarEducacionModal" tabindex="-1"
+                            aria-labelledby="agregarEducacionModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="agregarEducacionModalLabel">Añadir Educación</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <div class="mb-3">
+                                            <h5 style="text-align:left" class="form-label">Título:</h5>
+                                            <input class="form-control" type="text" id="formText">
+                                        </div>
+                                        <div class="mb-3">
+                                            <h5 style="text-align:left" class="form-label">Centro Educativo:</h5>
+                                            <input class="form-control" type="text" id="formText">
+                                        </div>
+                                        <div class="mb-3">
+                                            <h5 style="text-align:left" class="form-label">Período:</h5>
+                                            <input class="form-control" type="text" id="formText">
+                                        </div>
+                                        <div class="mb-3">
+                                            <h5 style="text-align:left" class="form-label">Logo del Centro Educativo:
+                                            </h5>
+                                            <input class="form-control" type="file" id="formFile">
+                                        </div>
+                                        <div class="mb-3">
+                                            <h5 style="text-align:left" class="form-label">Descripción (Opcional):</h5>
+                                            <textarea class="form-control" aria-label="With textarea"></textarea>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-1 text-center">
+                            <img src="ASSETS/IMG/icono graduacion.png" class="img-fluid rounded-start" width="50px"
+                                alt="...">
+                        </div>
+                        <div class="col-10">
+                            <div class="card-body" style="padding: 0;">
+                                <h5 class="card-title">Licenciatura en Educación Informática</h5>
+                                <p>Universidad del Zulia - Venezuela</p>
+                                <p class="card-text"><small class="text-muted">04/2012 - 03/2017</small></p>
+                                <p class="card-text"></p>
+                            </div>
+                        </div>
+
+                        <div class="col-1 text-end">
+
+                            <!-- Button trigger modal -->
+                            <button type="button" id="botonEditarEducacion" disabled style="display:none;" data-bs-toggle="modal" 
+                            data-bs-target="#editarEducacionModal"
+                                class="btn btn-success rounded-circle btn-sm"><i class="fa-solid fa-pen">
+                                </i>
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="editarEducacionModal" tabindex="-1"
+                                aria-labelledby="editarEducacionModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="editarEducacionModalLabel">Editar Educación</h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            <div class="mb-3">
+                                                <h5 style="text-align:left" class="form-label">Título:</h5>
+                                                <input class="form-control" type="text" id="formText">
+                                            </div>
+                                            <div class="mb-3">
+                                                <h5 style="text-align:left" class="form-label">Centro Educativo:</h5>
+                                                <input class="form-control" type="text" id="formText">
+                                            </div>
+                                            <div class="mb-3">
+                                                <h5 style="text-align:left" class="form-label">Período:</h5>
+                                                <input class="form-control" type="text" id="formText">
+                                            </div>
+                                            <div class="mb-3">
+                                                <h5 style="text-align:left" class="form-label">Logo del Centro
+                                                    Educativo:</h5>
+                                                <input class="form-control" type="file" id="formFile">
+                                            </div>
+                                            <div class="mb-3">
+                                                <h5 style="text-align:left" class="form-label">Descripción (Opcional):
+                                                </h5>
+                                                <textarea class="form-control" aria-label="With textarea"></textarea>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Button trigger modal -->
+                            <button type="button" id="botonEliminarEducacion" disabled style="display:none;" data-bs-toggle="modal" 
+                            data-bs-target="#eliminarEducacionModal"
+                                class="btn btn-success rounded-circle btn-sm"><i class="fa-solid fa-trash-can">
+                                </i>
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal" tabindex="-1" id="eliminarEducacionModal"
+                                aria-labelledby="eliminarEducacionModalModalLabel">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="eliminarEducacionModalLabel">Eliminar Educación
+                                            </h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h5 style="text-align:left" class="form-label">¿Está seguro de eliminar?
+                                            </h5>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Cancelar</button>
+                                            <button type="button" class="btn btn-primary">Aceptar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades" class="rounded">
+            <div class="container-fluid">
+
+                <div class="row g-0">
+                    <div class="col-11">
+                        <h3 style="padding-top: 1rem;">Habilidades</h3>
+                    </div>
+                    <div class="col-1 text-end" style="padding-top: 1rem; padding-right: 1rem;">
+
+                        <!-- Button trigger modal -->
+                        <button type="button" id="botonAgregarHabilidad" data-bs-toggle="modal" disabled style="display:none;"
+                        data-bs-target="#agregarHabilidadModal"
+                            class="btn btn-success rounded-circle btn-sm"><i class="fa-solid fa-plus">
+                            </i>
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="agregarHabilidadModal" tabindex="-1"
+                            aria-labelledby="agregarHabilidadModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="agregarHabilidadModalLabel">Agregar Habilidad</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <div class="mb-3">
+                                            <h5 style="text-align:left" class="form-label">Habilidad:</h5>
+                                            <input class="form-control" type="text" id="formText">
+                                        </div>
+                                        <div class="mb-3">
+                                            <h5 style="text-align:left" class="form-label">Porcentaje:</h5>
+                                            <input class="form-control" type="text" id="formText">
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-11">
+                            <div class="card-body" style="padding: 0;">
+                                <h5 class="card-title">Trabajo en Equipo</h5>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" role="progressbar" aria-label="Info example"
+                                        style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-1 text-end">
+                            <!-- Button trigger modal -->
+                            <button type="button" id="botonEditarHabilidad" disabled style="display:none;"
+                            data-bs-toggle="modal" data-bs-target="#editarHabilidadModal"
+                                class="btn btn-success rounded-circle btn-sm"><i class="fa-solid fa-pen">
+                                </i>
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="editarHabilidadModal" tabindex="-1"
+                                aria-labelledby="editarHabilidadModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="editarHabilidadModalLabel">Editar Habilidad</h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            <div class="mb-3">
+                                                <h5 style="text-align:left" class="form-label">Habilidad:</h5>
+                                                <input class="form-control" type="text" id="formText">
+                                            </div>
+                                            <div class="mb-3">
+                                                <h5 style="text-align:left" class="form-label">Porcentaje:</h5>
+                                                <input class="form-control" type="text" id="formText">
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Button trigger modal -->
+                            <button type="button" id="botonEliminarHabilidad" disabled style="display:none;"
+                            data-bs-toggle="modal" data-bs-target="#eliminarHabilidadModal"
+                                class="btn btn-success rounded-circle btn-sm"><i class="fa-solid fa-trash-can">
+                                </i>
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal" tabindex="-1" id="eliminarHabilidadModal"
+                                aria-labelledby="eliminarHabilidadModalModalLabel">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="eliminarHabilidadModalLabel">Eliminar Habilidad
+                                            </h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h5 style="text-align:left" class="form-label">¿Está seguro de eliminar?
+                                            </h5>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Cancelar</button>
+                                            <button type="button" class="btn btn-primary">Aceptar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+
+        <section id="idiomas" class="rounded">
+            <div class="container-fluid">
+
+                <div class="row g-0">
+                    <div class="col-11">
+                        <h3 style="padding-top: 1rem;">Idiomas</h3>
+                    </div>
+                    <div class="col-1 text-end" style="padding-top: 1rem; padding-right: 1rem;">
+                        <!-- Button trigger modal -->
+                        <button type="button" id="botonAgregarIdioma" disabled style="display:none;"
+                        data-bs-toggle="modal" data-bs-target="#agregarIdiomaModal"
+                            class="btn btn-success rounded-circle btn-sm"><i class="fa-solid fa-plus">
+                            </i>
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="agregarIdiomaModal" tabindex="-1"
+                            aria-labelledby="agregarIdiomaModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="agregarIdiomadModalLabel">Agregar Idioma</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <div class="mb-3">
+                                            <h5 style="text-align:left" class="form-label">Idioma:</h5>
+                                            <input class="form-control" type="text" id="formText">
+                                        </div>
+                                        <div class="mb-3">
+                                            <h5 style="text-align:left" class="form-label">Porcentaje:</h5>
+                                            <input class="form-control" type="text" id="formText">
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-11">
+                            <div class="card-body" style="padding: 0;">
+                                <h5 class="card-title">Español</h5>
+                                <div class="progress">
+                                    <div class="progress-bar bg-info" role="progressbar" aria-label="Info example"
+                                        style="width: 50%" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-1 text-end">
+                            <!-- Button trigger modal -->
+                            <button type="button" id="botonEditarIdioma" disabled style="display:none;"
+                            data-bs-toggle="modal" data-bs-target="#editarIdiomaModal"
+                                class="btn btn-success rounded-circle btn-sm"><i class="fa-solid fa-pen">
+                                </i>
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal fade" id="editarIdiomaModal" tabindex="-1"
+                                aria-labelledby="editarIdiomaModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="editarIdiomaModalLabel">Editar Idioma</h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            <div class="mb-3">
+                                                <h5 style="text-align:left" class="form-label">Idioma:</h5>
+                                                <input class="form-control" type="text" id="formText">
+                                            </div>
+                                            <div class="mb-3">
+                                                <h5 style="text-align:left" class="form-label">Porcentaje:</h5>
+                                                <input class="form-control" type="text" id="formText">
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Button trigger modal -->
+                            <button type="button" id="botonEliminarIdioma" disabled style="display:none;"
+                            data-bs-toggle="modal" data-bs-target="#eliminarIdiomaModal"
+                                class="btn btn-success rounded-circle btn-sm"><i class="fa-solid fa-trash-can">
+                                </i>
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal" tabindex="-1" id="eliminarIdiomaModal"
+                                aria-labelledby="eliminarIdiomaModalModalLabel">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="eliminarIdiomaModalLabel">Eliminar Idioma</h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h5 style="text-align:left" class="form-label">¿Está seguro de eliminar?
+                                            </h5>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Cancelar</button>
+                                            <button type="button" class="btn btn-primary">Aceptar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+        </section>
+
+        <section id="proyectos" class="rounded">
+            <div class="container-fluid">
+
+                <div class="row g-0">
+                    <div class="col-11">
+                        <h3 style="padding-top: 1rem;">Proyectos</h3>
+                    </div>
+                    <div class="col-1 text-end" style="padding-top: 1rem; padding-right: 1rem;">
+
+                        <!-- Button trigger modal -->
+                        <button type="button" id="botonAgregarProyecto" disabled style="display:none;"
+                        data-bs-toggle="modal" data-bs-target="#agregarProyectoModal"
+                            class="btn btn-success rounded-circle btn-sm"><i class="fa-solid fa-plus">
+                            </i>
+                        </button>
+                        <!-- Modal -->
+                        <div class="modal fade" id="agregarProyectoModal" tabindex="-1"
+                            aria-labelledby="agregarProyectoModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h4 class="modal-title" id="agregarProyectoModalLabel">Añadir Proyecto</h4>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+
+                                    <div class="modal-body">
+                                        <div class="mb-3">
+                                            <h5 style="text-align:left" class="form-label">Nombre:</h5>
+                                            <input class="form-control" type="text" id="formText">
+                                        </div>
+                                        <div class="mb-3">
+                                            <h5 style="text-align:left" class="form-label">Fecha de realización:</h5>
+                                            <input class="form-control" type="text" id="formText">
+                                        </div>
+                                        <div class="mb-3">
+                                            <h5 style="text-align:left" class="form-label">Logo del Proyecto:</h5>
+                                            <input class="form-control" type="file" id="formFile">
+                                        </div>
+                                        <div class="mb-3">
+                                            <h5 style="text-align:left" class="form-label">Descripción:</h5>
+                                            <textarea class="form-control" aria-label="With textarea"></textarea>
+                                        </div>
+                                        <div class="mb-3">
+                                            <h5 style="text-align:left" class="form-label">Link:</h5>
+                                            <input class="form-control" type="text" id="formText">
+                                        </div>
+                                        <div class="mb-3">
+                                            <h5 style="text-align:left" class="form-label">Imágenes del Proyecto:</h5>
+                                            <input class="form-control" type="file" id="formFileMultiple" multiple>
+                                        </div>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-primary">Guardar</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card mb-3">
+                    <div class="row g-0">
+                        <div class="col-1 text-center">
+                            <img src="ASSETS/IMG/engranaje.png" class="img-fluid rounded-start" width="50px" alt="...">
+                        </div>
+                        <div class="col-10">
+                            <div class="card-body" style="padding: 0;">
+                                <h5 class="card-title">Portfolio Web</h5>
+                                <p class="card-text"><small class="text-muted">07/2021 - 01/2022</small></p>
+                                <p id="descripcionProyectos" class="card-text">Diseño y programación del presente Portfolio Web seguiendo los lineamientos de Argentina Programa.
+                      </p>
+                      <a href=" https://getbootstrap.com/docs/5.2/forms/form-control/">Link del proyecto</a>
+                            </div>
+                        </div>
+
+                        <div class="col-1 text-end">
+                            <!-- Button trigger modal -->
+                            <button type="button" id="botonEditarProyecto" disabled style="display:none;"
+                            data-bs-toggle="modal" data-bs-target="#editarProyectoModal"
+                                class="btn btn-success rounded-circle btn-sm"><i class="fa-solid fa-pen">
+                                </i>
+                            </button>
+
+                            <!-- Modal -->
+                            <div class="modal fade" id="editarProyectoModal" tabindex="-1"
+                                aria-labelledby="editarrProyectoModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="editarProyectoModalLabel">Editar Proyecto</h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+
+                                        <div class="modal-body">
+                                            <div class="mb-3">
+                                                <h5 style="text-align:left" class="form-label">Nombre:</h5>
+                                                <input class="form-control" type="text" id="formText">
+                                            </div>
+                                            <div class="mb-3">
+                                                <h5 style="text-align:left" class="form-label">Fecha de realización:
+                                                </h5>
+                                                <input class="form-control" type="text" id="formText">
+                                            </div>
+                                            <div class="mb-3">
+                                                <h5 style="text-align:left" class="form-label">Logo del Proyecto:</h5>
+                                                <input class="form-control" type="file" id="formFile">
+                                            </div>
+                                            <div class="mb-3">
+                                                <h5 style="text-align:left" class="form-label">Descripción:</h5>
+                                                <textarea class="form-control" aria-label="With textarea"></textarea>
+                                            </div>
+                                            <div class="mb-3">
+                                                <h5 style="text-align:left" class="form-label">Link:</h5>
+                                                <input class="form-control" type="text" id="formText">
+                                            </div>
+                                            <div class="mb-3">
+                                                <h5 style="text-align:left" class="form-label">Imágenes del Proyecto:
+                                                </h5>
+                                                <input class="form-control" type="file" id="formFileMultiple" multiple>
+                                            </div>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-primary">Guardar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Button trigger modal -->
+                            <button type="button" id="botonEliminarProyecto" disabled style="display:none;"
+                            data-bs-toggle="modal" data-bs-target="#eliminarProyectoModal"
+                                class="btn btn-success rounded-circle btn-sm"><i class="fa-solid fa-trash-can">
+                                </i>
+                            </button>
+                            <!-- Modal -->
+                            <div class="modal" tabindex="-1" id="eliminarProyectoModal"
+                                aria-labelledby="eliminarProyectoModalModalLabel">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title" id="eliminarProyectoModalLabel">Eliminar Proyecto
+                                            </h4>
+                                            <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                                aria-label="Close"></button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h5 style="text-align:left" class="form-label">¿Está seguro de eliminar?
+                                            </h5>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-secondary"
+                                                data-bs-dismiss="modal">Cancelar</button>
+                                            <button type="button" class="btn btn-primary">Aceptar</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="row g-0">
+                        <div class="col-1">
+
+                        </div>
+                        <div class="col-5 text-center">
+                            <div class="card-body" style="padding: 0;">
+                                <img src="ASSETS/IMG/imagen-referencia-seccion-proyectos.png" class="container-fluid">
+                            </div>
+                        </div>
+                        <div class="col-5 text-center">
+                            <div class="card-body" style="padding: 0;">
+                                <img src="ASSETS/IMG/imagen-referencia-seccion-proyectos.png" class="container-fluid">
+                            </div>
+                        </div>
+
+                        <div class="col-1">
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+        <script src="ASSETS/JS/myJs.js"></script>
+</body>
+
+</html>

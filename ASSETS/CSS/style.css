@@ -1,0 +1,151 @@
+* {
+    font-family: 'Montserrat';
+}
+
+i.fa-solid.fa-user-lock.fa-2xl,
+i.fa-solid.fa-user.fa-2xl {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    margin-left: 10px;
+    transition: .5s;
+}
+
+i.fa-brands.fa-square-facebook.fa-xl:hover {
+    color: #1d20d8;
+    transition: .5s;
+}
+
+i.fa-brands.fa-linkedin.fa-xl:hover {
+    color: #78BCDC;
+    transition: .5s;
+}
+
+i.fa-brands.fa-github.fa-xl:hover {
+    color: #000000;
+    transition: .5s;
+}
+
+i.fa-solid.fa-user-lock.fa-2xl:hover {
+    color: #63d417;
+    transition: .5s;
+}
+
+i.fa-solid.fa-user.fa-2xl:hover {
+    color: #ee0808;
+    transition: .5s;
+}
+
+#inicio {
+    background-size: cover;
+    background-position: center center;
+}
+
+#inicio .contenido header {
+    background-color: #8d8c89ce;
+    width: 100%;
+    z-index: 100;
+    top: 0;
+}
+
+#inicio .contenido header .contenido-header {
+    margin: auto;
+    display: inline-flexbox;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    height: auto;
+}
+
+.redes {
+    position: absolute;
+    top: 40%;
+    right: 1rem;
+}
+
+#inicio .contenido header .contenido-header .redes a {
+    text-decoration: none;
+    color: #fff;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.parpadea {
+    animation-name: parpadeo;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+  
+    -webkit-animation-name:parpadeo;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+  }
+  
+  @-moz-keyframes parpadeo{
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+  
+  @-webkit-keyframes parpadeo {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+  
+  @keyframes parpadeo {
+    0% { opacity: 1.0; }
+    50% { opacity: 0.0; }
+    100% { opacity: 1.0; }
+  }
+
+.banner {
+    margin-top: 0rem;
+}
+
+#experiencia,
+#educacion,
+#habilidades,
+#idiomas,
+#proyectos,
+#idiomas {
+    padding-bottom: 1rem;
+    margin: 2rem;
+    background-color: #6592e6af;
+}
+
+#descripcionExperienciaLaboral,
+#descripcionProyectos{
+    text-align: justify;
+}
+
+.card.mb-3 {
+    margin-top: 1.5rem;
+}
+
+@media(max-width:700px) {
+
+    #experiencia,
+    #educacion,
+    #habilidades,
+    #idiomas,
+    #proyectos,
+    #idiomas {
+        width: 100%;
+        margin-top: 0.5rem;
+        margin-bottom: 0.5rem;
+        margin-left: 0rem;
+        margin-right: 0rem;
+    }
+}
+
+@media(max-width:700px) {
+    .card.mb-3 {
+        margin-top: 0rem;
+    }
+}
+
+@media(max-width:815px) {
+    #botonFotoPerfil {
+        top: 30% !important;
+    }
+}
